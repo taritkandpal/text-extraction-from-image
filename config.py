@@ -1,0 +1,30 @@
+from pathlib import Path
+
+PROJECT_PATH = r"D:\Projects\text-extraction-from-image"
+SEED = 42
+DATA_PATH = Path(r"data/final")
+OP_PATH = Path(r"outputs")
+
+BOS_TOKEN = 2
+EOS_TOKEN = 3
+
+IN_CHANNELS = 1
+WIDE_FEATURES = 32
+DEEP_FEATURES = 8
+OUT_CHANNELS = 256  # output will be OUT_CHANNELS * 2 as we concatenate output from wide and deep models
+VOCAB_LEN = 99
+TR_HIDDEN_DIM = 512
+TR_NHEADS = 8
+TR_NUM_ENCODER_LAYERS = 6
+TR_NUM_DECODER_LAYERS = 6
+MAX_TOKENS = 1024
+ENCODER_OP_DIM = 16
+
+TRAIN_RATIO = 0.99
+BATCH_SIZE = 4
+NUM_WORKERS = 8
+LEARNING_RATE = 1e-4
+LABEL_SMOOTHING = 0.2
+NUM_EPOCHS = 200
+NUM_VAL_EPOCHS = 20
+GRAD_CLIP = None
